@@ -1,4 +1,18 @@
-# IAM Role Mining Engine
+# 🔍 IAM Role Mining Engine
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Microsoft-Entra%20ID-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Entra ID">
+  <img src="https://img.shields.io/badge/Microsoft%20Graph-PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="Graph PowerShell">
+  <img src="https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Faker.js-Node-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Faker.js">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Role%20Discovery-16%2F16%20(F1%200.923)-success?style=flat-square" alt="Role Discovery">
+  <img src="https://img.shields.io/badge/SoD%20Detection-1.0%20Precision%20%2F%201.0%20Recall-success?style=flat-square" alt="SoD Detection">
+  <img src="https://img.shields.io/badge/Domain-HIPAA%20%7C%20SOX%20ITGC-blue?style=flat-square" alt="Domain">
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square" alt="License">
+</p>
 
 **Bottom-up role discovery and separation-of-duties detection on a 1,000-identity synthetic access warehouse — 16 / 16 business roles recovered (F1 0.923), SoD violations detected at 1.0 precision / 1.0 recall, validated against ground truth.**
 
@@ -178,6 +192,39 @@ pwsh ./Deploy-DiscoveredRoles.ps1 -WhatIf           # dry-run the Entra deployme
 **Hardest part?** Recognizing that SoD detection is a policy-compliance problem, not an anomaly-detection problem. My first detector was the wrong tool, and fixing it required understanding *why* an organizational boundary and a control boundary look identical to a rarity scan but are completely different to a compliance engine.
 
 **Why does a toxic pair inside a role matter more than one on a single user?** Because it's granted to everyone in that role by default and looks like the norm — invisible to anomaly detection. Finding four and remediating the role design is the highest-value output of the project.
+
+---
+
+## 🔗 Related Resources
+
+- [Microsoft Entra ID Documentation](https://learn.microsoft.com/en-us/entra/identity/)
+- [Microsoft Graph PowerShell SDK](https://learn.microsoft.com/en-us/powershell/microsoftgraph/)
+- [mlxtend — Frequent Itemsets](https://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/)
+- [kmodes — Categorical Clustering](https://github.com/nicodv/kmodes)
+- [NIST SP 800-53 — Access Control (AC) Family](https://csrc.nist.gov/projects/risk-management/sp800-53-controls/release-search#!/family?ac)
+
+---
+
+## 📝 Medium Article
+
+📖 **Read the full case study:** _Mining Roles from Chaos: How I Built a Role-Mining Engine and Caught Four SoD Violations I'd Designed Into My Own Roles_ — *(link to be added)*
+
+---
+
+## 👤 Author
+
+**Isaiah Herard**
+IAM/PAM Analyst | Access Governance | Aspiring CyberArk PAM Engineer
+
+- GitHub: [ZayLinux26](https://github.com/ZayLinux26)
+- LinkedIn: [isaiah-herard](https://www.linkedin.com/in/isaiah-herard)
+- Portfolio: [iam-analyst-portfolio](https://github.com/ZayLinux26/iam-analyst-portfolio)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
 
 ---
 
